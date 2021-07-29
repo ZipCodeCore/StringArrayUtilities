@@ -132,7 +132,6 @@ public class StringArrayUtils {
         return count;
 
 
-        //return 0;
     }
 
     /**
@@ -156,10 +155,7 @@ public class StringArrayUtils {
     public static String[] removeConsecutiveDuplicates(String[] array) {
 
      ArrayList<String> newList = new ArrayList<String>();
-
       newList.add(array[0]);
-
-
 
   for (int i = 1; i < array.length; i ++ ){
    if(array[i] != array[ i- 1]){
@@ -167,7 +163,6 @@ public class StringArrayUtils {
        newList.add(array[i]);
      }
    }
-
         return newList.toArray(new String[newList.size()]);
     }
 
@@ -178,15 +173,15 @@ public class StringArrayUtils {
     public static String[] packConsecutiveDuplicates(String[] array) {
         //ArrayList<String> newList = new ArrayList<String>();
         int length = array.length;
-        int lastIndex = 0;
+        int current = 0; // THE LAST INDEX
         ArrayList<String> newList = new ArrayList<String>();
         newList.add(array[0]);
 
         for (int i = 1; i < array.length; i++) {
-            if (newList.get(lastIndex).contains(array[i])) { // used .contains cuz aa != a
-                newList.set(lastIndex, (newList.get(lastIndex) + array[i]));
+            if (newList.get(current).contains(array[i])) { // used .contains Insted of .charAt() cuz aa != a
+                newList.set(current, (newList.get(current) + array[i]));
             } else {
-                lastIndex++;
+                current++;
                 newList.add(array[i]);
             }
 
@@ -198,21 +193,10 @@ public class StringArrayUtils {
 
     }
 
-//return newList.toArray(new String[0]);
 
 
 
 
-//ArrayList<String>  list = new ArrayList<>();
-// add package and drop class there
-       /* newList.add(array[0]);
-          for (int i = 1; i < array.length; i ++){
-              if (array [1] == array[i-1]) {
-                  newList.add(array[i]);
-              }
-          }
-
-        return newList.toArray(new String [newList.size()]);*/
 
 
 
