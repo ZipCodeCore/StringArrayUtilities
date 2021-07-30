@@ -92,6 +92,8 @@ public class StringArrayUtils {
 
         return true;
 
+//        String[] arrBackwards = StringArrayUtils.reverse(array);   // only pass 2/3 test
+//        return (Arrays.equals(array, arrBackwards));
     }
 
     /**
@@ -100,16 +102,27 @@ public class StringArrayUtils {
      */ // TODO
     public static boolean isPangramic(String[] array) {
 
-        ArrayList<String> StringOfArrays = new ArrayList<String>(Arrays.asList(array));
-        String newString = StringOfArrays.toString().toLowerCase();
-        String abc = "abcdefghigklmnopqrstuvwxyz";
-        for (int i = 0; i < abc.length(); i++) {
+//        ArrayList<String> StringOfArrays = new ArrayList<String>(Arrays.asList(array));
+//        String newString = StringOfArrays.toString().toLowerCase();
+//        String abc = "abcdefghigklmnopqrstuvwxyz";
+//        for (int i = 0; i < abc.length(); i++) {
+//
+//            if (newString.indexOf(abc.charAt(i)) == -1) {
+//                return false;
+//            }
+//        }
+//        return true;
 
-            if (newString.indexOf(abc.charAt(i)) == -1) {
-                return false;
-            }
+        boolean siOno = true;
+        String[] abc = "abcdefghijklmnopqrstuvwxyz ,".split("");
+        String arrString = Arrays.toString(array).toLowerCase();
+
+        for (String element : abc){
+            if (!arrString.contains(element))
+                siOno = false;
         }
-        return true;
+        return siOno;
+
     }
 
 
@@ -140,11 +153,19 @@ public class StringArrayUtils {
      * @return array with identical contents excluding values of `value`
      */ // TODO
     public static String[] removeValue(String[] array, String valueToRemove) {
+//
+//        List<String> newList = new ArrayList<String>(Arrays.asList(array));
+//        newList.remove(valueToRemove);
+//        array = newList.toArray((new String[0]));
+//        return array;
 
-        List<String> newList = new ArrayList<String>(Arrays.asList(array));
-        newList.remove(valueToRemove);
-        array = newList.toArray((new String[0]));
-        return array;
+        List<String> listArr = new ArrayList<String>(Arrays.asList(array));
+        listArr.remove(valueToRemove);
+
+        String[] newArray = new String[listArr.size()]; //passing content to array
+        newArray = listArr.toArray(newArray);
+
+        return newArray;
 
     }
 
