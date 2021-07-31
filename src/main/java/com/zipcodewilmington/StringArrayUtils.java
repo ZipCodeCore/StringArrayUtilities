@@ -92,8 +92,6 @@ public class StringArrayUtils {
 
         return true;
 
-//        String[] arrBackwards = StringArrayUtils.reverse(array);   // only pass 2/3 test
-//        return (Arrays.equals(array, arrBackwards));
     }
 
     /**
@@ -101,6 +99,17 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
+
+        String[] abc = "abcdefghijklmnopqrstuvwxyz ,".split("");
+        String arrString = Arrays.toString(array).toLowerCase();
+
+        for (String letra : abc){
+            if (!arrString.contains(letra))
+                return false;
+        }
+        return true;
+
+    }
 
 //        ArrayList<String> StringOfArrays = new ArrayList<String>(Arrays.asList(array));
 //        String newString = StringOfArrays.toString().toLowerCase();
@@ -112,18 +121,6 @@ public class StringArrayUtils {
 //            }
 //        }
 //        return true;
-
-        boolean siOno = true;
-        String[] abc = "abcdefghijklmnopqrstuvwxyz ,".split("");
-        String arrString = Arrays.toString(array).toLowerCase();
-
-        for (String element : abc){
-            if (!arrString.contains(element))
-                siOno = false;
-        }
-        return siOno;
-
-    }
 
 
 
@@ -137,7 +134,7 @@ public class StringArrayUtils {
 
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            if (value.equals(array[i])) {
+            if (array[i] == value) {
                 count++;
             }
             //return 0;
@@ -153,21 +150,32 @@ public class StringArrayUtils {
      * @return array with identical contents excluding values of `value`
      */ // TODO
     public static String[] removeValue(String[] array, String valueToRemove) {
-//
-//        List<String> newList = new ArrayList<String>(Arrays.asList(array));
-//        newList.remove(valueToRemove);
-//        array = newList.toArray((new String[0]));
-//        return array;
 
-        List<String> listArr = new ArrayList<String>(Arrays.asList(array));
-        listArr.remove(valueToRemove);
-
-        String[] newArray = new String[listArr.size()]; //passing content to array
-        newArray = listArr.toArray(newArray);
+        String[] newArray = new String[array.length - 1];
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (!array[i].equals(valueToRemove)) {
+                newArray[count] = array[i];
+                count++;
+            }
+        }
 
         return newArray;
-
     }
+
+
+//-----------------------THIS ALSO WORKS BUT ITS WITH LIST------------------------------------------
+
+//        List<String> listArr = new ArrayList<String>(Arrays.asList(array));
+//        listArr.remove(valueToRemove);
+//
+//        String[] newArray = new String[listArr.size()]; //passing content to array
+//        newArray = listArr.toArray(newArray);
+//
+//        return newArray;
+
+
+
 
     /**
      * @param array array of chars
@@ -206,7 +214,7 @@ public class StringArrayUtils {
                 newList.add(array[i]);
             }
 
-          //  return newList.toArray(new String[0]);
+
         }
         return newList.toArray(new String[0]);
 
@@ -214,7 +222,7 @@ public class StringArrayUtils {
 
     }
 
-
+//  return newList.toArray(new String[0]);
 
 
 
