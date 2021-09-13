@@ -164,7 +164,7 @@ public class StringArrayUtils {
     }
 
 
-//-----------------------THIS ALSO WORKS BUT ITS WITH LIST------------------------------------------
+//----------------------------THIS ALSO WORKS BUT ITS WITH LIST------------------------------------------
 
 //        List<String> listArr = new ArrayList<String>(Arrays.asList(array));
 //        listArr.remove(valueToRemove);
@@ -223,8 +223,6 @@ public class StringArrayUtils {
     }
 
 //  return newList.toArray(new String[0]);
-
-
 
 
 
