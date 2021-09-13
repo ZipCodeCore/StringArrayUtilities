@@ -111,17 +111,6 @@ public class StringArrayUtils {
 
     }
 
-//        ArrayList<String> StringOfArrays = new ArrayList<String>(Arrays.asList(array));
-//        String newString = StringOfArrays.toString().toLowerCase();
-//        String abc = "abcdefghigklmnopqrstuvwxyz";
-//        for (int i = 0; i < abc.length(); i++) {
-//
-//            if (newString.indexOf(abc.charAt(i)) == -1) {
-//                return false;
-//            }
-//        }
-//        return true;
-
 
 
     /**
@@ -222,7 +211,7 @@ public class StringArrayUtils {
 
     }
 
-//  return newList.toArray(new String[0]);
+
 
 
 
