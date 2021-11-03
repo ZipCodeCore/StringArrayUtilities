@@ -83,9 +83,9 @@ public class StringArrayUtils {
      */ // TODO
     public static boolean isPangramic(String[] array) {
         //an algo which goes thru the string[] and takes out stuff as it sees it
-        String abc = "abcdefghijklmnopqrstuvwxyz";
+        String[] abc = "abcdefghijklmnopqrstuvwxyz".split("");
         ArrayList<String> atLarge =  new ArrayList<String>();
-        Collections.addAll(atLarge,abc.split(""));
+        Collections.addAll(atLarge, abc);
         ArrayList<String> found  = new ArrayList<String>();
         int count = 0;
         boolean wasFound = false;
@@ -153,7 +153,10 @@ public class StringArrayUtils {
      * @return array with identical contents excluding values of `value`
      */ // TODO
     public static String[] removeValue(String[] array, String valueToRemove) {
-        return null;
+        ArrayList<String> strings = new ArrayList<String>();
+        Collections.addAll(strings, array);
+        strings.remove(valueToRemove);
+        return strings.toArray(new String[array.length]);
     }
 
     /**
@@ -161,7 +164,15 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-        return null;
+        ArrayList<String> strings = new ArrayList<String>();
+        Collections.addAll(strings, array);
+        for(int i = 0; i < strings.size(); i++){
+            if(i != 0 && strings.get(i).equals(strings.get(i - 1))){
+                strings.remove(i);
+                i--;
+            }
+        }
+        return strings.toArray(new String[array.length]);
     }
 
     /**
@@ -169,7 +180,15 @@ public class StringArrayUtils {
      * @return array of Strings with each consecutive duplicate occurrence concatenated as a single string in an array of Strings
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
-        return null;
+        ArrayList<String> strings = new ArrayList<String>();
+        Collections.addAll(strings, array);
+        for(int i = 0; i < strings.size(); i++){
+            if(i != 0 && strings.get(i).equals(strings.get(i - 1))){
+                strings.set(i,strings.get(i) + strings.get(i - 1));
+                strings.remove(i-1);
+            }
+        }
+        return strings.toArray(new String[array.length]);
     }
 
 
