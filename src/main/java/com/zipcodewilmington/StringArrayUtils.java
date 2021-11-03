@@ -128,20 +128,9 @@ public class StringArrayUtils {
     public static int getNumberOfOccurrences(String[] array, String value) {
         int occs = 0;
         boolean different = false;
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array[i].length(); j++){
-                if(array[i].charAt(j) == value.charAt(0)){
-                    for(int k = 1; k < value.length() ; k++){
-                        j++;
-                        if(value.charAt(k) != array[i].charAt(j)){
-                            k = value.length();
-                            different = true;
-                        }
-                    }
-                    if(!different){
-                        occs++;
-                    }
-                }
+        for(int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)) {
+                occs++;
             }
         }
         return occs;
@@ -156,7 +145,7 @@ public class StringArrayUtils {
         ArrayList<String> strings = new ArrayList<String>();
         Collections.addAll(strings, array);
         strings.remove(valueToRemove);
-        return strings.toArray(new String[array.length]);
+        return strings.toArray(new String[0]);
     }
 
     /**
@@ -168,11 +157,10 @@ public class StringArrayUtils {
         Collections.addAll(strings, array);
         for(int i = 0; i < strings.size(); i++){
             if(i != 0 && strings.get(i).equals(strings.get(i - 1))){
-                strings.remove(i);
-                i--;
+                strings.remove(i--);
             }
         }
-        return strings.toArray(new String[array.length]);
+        return strings.toArray(new String[0]);
     }
 
     /**
@@ -183,12 +171,12 @@ public class StringArrayUtils {
         ArrayList<String> strings = new ArrayList<String>();
         Collections.addAll(strings, array);
         for(int i = 0; i < strings.size(); i++){
-            if(i != 0 && strings.get(i).equals(strings.get(i - 1))){
-                strings.set(i,strings.get(i) + strings.get(i - 1));
-                strings.remove(i-1);
+            while(i != strings.size() -1 && strings.get(i).charAt(0) == (strings.get(i+1).charAt(0))){ 
+                strings.set(i, strings.get(i) + strings.get(i+1));
+                strings.remove(i+1);
             }
         }
-        return strings.toArray(new String[array.length]);
+        return strings.toArray(new String[0]);
     }
 
 
