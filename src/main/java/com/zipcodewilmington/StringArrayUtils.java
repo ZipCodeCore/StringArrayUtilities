@@ -2,6 +2,7 @@ package com.zipcodewilmington;
 
 import com.sun.tools.javac.util.ArrayUtils;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -110,30 +111,37 @@ public class StringArrayUtils {
         ArrayList<String> atLarge =  new ArrayList<String>();
         Collections.addAll(atLarge,abc.split(""));
         ArrayList<String> found  = new ArrayList<String>();
+        int count = 0;
+        boolean wasFound = false;
         for(int i = 0; i < array.length; i++){
+            //restart = false;
+            //System.out.println(i);
+            String[] cur = array[i].split("");
             for(int j = 0; j < array[i].length(); j++){
+                wasFound = false;
                 //ignore stuff already found
-                String[] cur = array[i].split("");
-                int wasFound = 0;
                 if(! found.isEmpty()) {
                     for(int l = 0; l < found.size(); l++) {
                         if(found.get(l).equals(cur[j])){
-                            j++;
+                            System.out.println("already found:" + found.get(l) + j);
                             l = found.size();
-                            wasFound++;
+                            wasFound = true;
                         }
                     }
                 }
-                if(j < cur.length && wasFound == 0) {
+                if(j < cur.length && !wasFound) {
                     for (int k = 0; k < atLarge.size(); k++) {
-                        if (atLarge.get(k).equals(cur[j])) {
+                        if(atLarge.isEmpty()){
+                            return true;
+                        }
+                        if (atLarge.get(k).equalsIgnoreCase(cur[j])) {
                             found.add(atLarge.get(k));
-                            //"suspicious"?
+                            System.out.println("found: " + atLarge.get(k) + j);
+                            // "suspicious"?
                             atLarge.remove(k);
                             k = atLarge.size();
-                            j = array[i].length();
-                            i = 0;
                         }
+
                     }
                 }
             }
@@ -147,7 +155,8 @@ public class StringArrayUtils {
      * @return number of occurrences the specified `value` has occurred
      */ // TODO
     public static int getNumberOfOccurrences(String[] array, String value) {
-        return 0;
+        int occs = 0;
+        return occs;
     }
 
     /**
