@@ -171,7 +171,7 @@ public class StringArrayUtils {
         ArrayList<String> strings = new ArrayList<String>();
         Collections.addAll(strings, array);
         for(int i = 0; i < strings.size(); i++){
-            while(i != strings.size() -1 && strings.get(i).charAt(0) == (strings.get(i+1).charAt(0))){ 
+            while(i != strings.size() -1 && strings.get(i).charAt(0) == (strings.get(i+1).charAt(0))){
                 strings.set(i, strings.get(i) + strings.get(i+1));
                 strings.remove(i+1);
             }
