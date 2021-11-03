@@ -1,5 +1,11 @@
 package com.zipcodewilmington;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * Created by leon on 1/29/18.
  */
@@ -25,7 +31,7 @@ public class StringArrayUtils {
      * @return last element in specified array
      */ // TODO
     public static String getLastElement(String[] array) {
-        return null;
+        return array[array.length-1];
     }
 
     /**
@@ -33,7 +39,7 @@ public class StringArrayUtils {
      * @return second to last element in specified array
      */ // TODO
     public static String getSecondToLastElement(String[] array) {
-        return null;
+        return array[array.length-2];
     }
 
     /**
@@ -42,6 +48,11 @@ public class StringArrayUtils {
      * @return true if the array contains the specified `value`
      */ // TODO
     public static boolean contains(String[] array, String value) {
+        for(String val: array){
+            if (val.equals(value)){
+                return true;
+            }
+        }
         return false;
     }
 
@@ -50,7 +61,11 @@ public class StringArrayUtils {
      * @return an array with identical contents in reverse order
      */ // TODO
     public static String[] reverse(String[] array) {
-        return null;
+        ArrayList<String> arrayL = new ArrayList<String>();
+        Collections.addAll(arrayL,array);
+        Collections.reverse(arrayL);
+        String[] arr = new String[array.length];
+        return arrayL.toArray(arr);
     }
 
     /**
@@ -58,7 +73,7 @@ public class StringArrayUtils {
      * @return true if the order of the array is the same backwards and forwards
      */ // TODO
     public static boolean isPalindromic(String[] array) {
-        return false;
+        return Arrays.equals(array,StringArrayUtils.reverse(array));
     }
 
     /**
@@ -66,7 +81,64 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        return false;
+        //a thing which goes thru the string[] and takes out stuff as it sees it
+        /**
+        String abc = "abcdefghijklmnopqrstuvwxyz";
+        int wasCharFound = 0;
+        int i , j , k = 0;
+        while(i < abc.length()){
+            wasCharFound = 0;
+            j = 0;
+            for(; j < array.length; j++){
+                k = 0;
+                for(; k < array[j].length();k++){
+                    if(array[j][k].equals(abc[i])){
+                        k = array[j].length();
+                        j = array.length;
+                        i++;
+                        wasCharFound++;
+                    }
+                }
+            }
+            if(wasCharFound == 0){
+                return false;
+            }
+        }
+        return true;
+         */
+        String abc = "abcdefghijklmnopqrstuvwxyz";
+        ArrayList<String> atLarge =  new ArrayList<String>();
+        Collections.addAll(atLarge,abc.split(""));
+        ArrayList<String> found  = new ArrayList<String>();
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length(); j++){
+                //ignore stuff already found
+                String[] cur = array[i].split("");
+                int wasFound = 0;
+                if(! found.isEmpty()) {
+                    for(int l = 0; l < found.size(); l++) {
+                        if(found.get(l).equals(cur[j])){
+                            j++;
+                            l = found.size();
+                            wasFound++;
+                        }
+                    }
+                }
+                if(j < cur.length && wasFound == 0) {
+                    for (int k = 0; k < atLarge.size(); k++) {
+                        if (atLarge.get(k).equals(cur[j])) {
+                            found.add(atLarge.get(k));
+                            //"suspicious"?
+                            atLarge.remove(k);
+                            k = atLarge.size();
+                            j = array[i].length();
+                            i = 0;
+                        }
+                    }
+                }
+            }
+        }
+        return atLarge.isEmpty();
     }
 
     /**
