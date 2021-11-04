@@ -17,6 +17,8 @@ public class GetConsecutiveDuplicatesTest {
 
 
 
+
+
     @Test
     public void testRemoveConsecutiveDuplicates2() {
         String[] array = {"aba", "aba", "baa", "bab", "bba", "zzz", "bba", "bba", "bba", "bbb", "bbb"};
