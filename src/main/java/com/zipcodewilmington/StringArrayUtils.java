@@ -2,7 +2,9 @@ package com.zipcodewilmington;
 
 import com.sun.xml.internal.fastinfoset.util.StringArray;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 1/29/18.
@@ -156,19 +158,18 @@ public class StringArrayUtils {
      * @param valueToRemove value to remove from array
      * @return array with identical contents excluding values of `value`
      */ // TODO
-    public static String[] removeValue(String[] array, String valueToRemove) {   ////// TODO please revisit
+    public static String[] removeValue(String[] array, String valueToRemove) {   //////
 
+        // with lists you dont have to declare a size, they can grow and shrink as needed
+        List<String> stringList = new ArrayList<String>();
 
-        // convert String[] to a string
-        String newString = Arrays.toString(array);
-        // since both are now strings, we can .replace and replace valueToRemove with "" (that is, nothing)
-        // declared and assigned to new string stringWithValuesRemoved
-        String stringWithValueRemoved = newString.replace(valueToRemove, "");
-        // use .split method to split the elements on a space " ", to make array of each word
-        // declare and assign as a new variable arrayWithValueRemoved
-        String[] arrayWithValueRemoved = stringWithValueRemoved.split(" ");
+        for (int i = 0; i < array.length; i++) {
+            if (!array[i].equals(valueToRemove)) {               // if array at i is the same as the valueToRemove
+                stringList.add(array[i]);                      // if so, then add array of i to stringList
+            }
 
-        return arrayWithValueRemoved;
+        }
+        return stringList.toArray(new String[0]);               // return our stringList, (new String[0]) is signifying that it will be a String array
 
 
     }
@@ -178,17 +179,17 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-        String[] removedDuplicatesArray = new String[5];
-        int arrayLength = array.length;
-        int counter = 0;
+       List<String> result = new ArrayList<String>();                       // created new list named result --  its always easier to use a list
 
-        for (int i = 0; i < arrayLength; i++) {
-            if (array[i] == array[i + 1]) {
-                counter++;
-                array[counter] = array[i];
+        for (int i = 0; i < array.length - 1; i++) {
+            if (!array[i].equals(array[i + 1])) {
+                result.add(array[i]);
             }
         }
-        return null;
+        if (!array[array.length - 1].equals(result.get(result.size() - 1))) {   /// if array at last index is the same as the last element in the list
+            result.add(array[array.length - 1]);                                /// add to result list the last element
+        }
+        return result.toArray(new String[0]);
 
 
     }
@@ -201,12 +202,11 @@ public class StringArrayUtils {
         // string to hold the position at 1
         String duplicates = array[0];
 
-        for (int i=1; i< array.length; i++) {
-            // if we are going through the array and we encounter a lettter thats is same to letter ebfore
-            if(array[i].equals(array[i-1])) {
+        for (int i = 1; i < array.length; i++) {
+            // if we are going through the array and we encounter a lettter thats is same to letter before
+            if (array[i].equals(array[i - 1])) {
                 duplicates = duplicates + array[i];
-            }
-            else {
+            } else {
                 duplicates = duplicates + " " + array[i];
             }
             System.out.println("duplicate " + duplicates);
