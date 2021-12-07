@@ -72,15 +72,6 @@ public class StringArrayUtils {
         return contains;
 
 
-
-
-
-
-
-
-
-
-
         ////        int count = 0;  // this counter IS NOT necessary. needs to return boolean value, not a count of something
 //
 //        // go through each word in array
@@ -123,9 +114,9 @@ public class StringArrayUtils {
      */ // TODO
     public static boolean isPalindromic(String[] array) {
         String[] reversed = reverse(array);       // just using above method to reverse String[] array
-                                                  // creates a new reversed array
+        // creates a new reversed array
         if (Arrays.equals(reversed, array)) {     // arrays.equals is an array util to compare arrays (pass in arrays)
-                                                  // if statement comparing both arrays using Arrays.equals
+            // if statement comparing both arrays using Arrays.equals
             return true;                          // return true if theyre equal
         }
         return false;                             // return false if not true.
@@ -140,10 +131,10 @@ public class StringArrayUtils {
         // needs to return a boolean T/F statement
 
         String newString = Arrays.toString(array);  // converted array to string
-                                                    // Arrays.toString util to make array into string
+        // Arrays.toString util to make array into string
 
         if (newString.length() < 26) {              // if this string is less than 26, has to be false
-                                                    // this is the obvious, if its less than 26 letters, its clearly false
+            // this is the obvious, if its less than 26 letters, its clearly false
             return false;                           // sometimes its best to knock out the obvious things first
         }                                           // this is placed above the loop, not a part of the below operation
 
@@ -152,8 +143,8 @@ public class StringArrayUtils {
 
         for (int i = 0; i < array.length; i++) {       // for loop to iterate through array
             if (!newString.contains(alphabet[i])) {    // if newString DOES NOT contain alphabet at element i
-                                                       // this is basically the opposite if if it contains the letter return true
-                                                       // doing it this way continues to rule out more cases
+                // this is basically the opposite if if it contains the letter return true
+                // doing it this way continues to rule out more cases
                 return false;                          // return false
             }
         }
@@ -210,8 +201,8 @@ public class StringArrayUtils {
 
         }
         return stringList.toArray(new String[0]);               // return our stringList, (new String[0]) is signifying...
-                                                                // that it will be a String array
-                                                                // we want to return a String[]
+        // that it will be a String array
+        // we want to return a String[]
 
 
     }
@@ -221,20 +212,23 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
-       List<String> result = new ArrayList<String>();                        // created new list named result --  its always...
-                                                                        // easier to use a list
+        List<String> result = new ArrayList<String>();
+        // created new list named result --  it is always
+        // easier to use a list
 
         for (int i = 0; i < array.length - 1; i++) {                    // for loop set up
             if (!array[i].equals(array[i + 1])) {                       // if theyre do not equal, throw that element into...
-                                                                        // our result list that we created
+                // our result list that we created
                 result.add(array[i]);                                   // list.add(value); is the general syntax to add value to list
             }
         }
 
-                 // https://www.geeksforgeeks.org/list-get-method-in-java-with-examples/
-                 // this link is for the .get method seen below
+        // https://www.geeksforgeeks.org/list-get-method-in-java-with-examples/
+        // this link is for the .get method seen below
+        // THIS BELOW CODE IS FOR CHECKING JUST THE LAST ELEMENT
+        // THIS IS FOR AN EDGE CASE
         if (!array[array.length - 1].equals(result.get(result.size() - 1))) {   // if array at last index is the same as the last...
-                                                                                // element in the list
+            // element in the list
             result.add(array[array.length - 1]);                                // add to our result list the last element
         }
         return result.toArray(new String[0]);                            // https://www.javatpoint.com/java-list-toarray-method
@@ -265,14 +259,13 @@ public class StringArrayUtils {
         return duplicates.split(" ");
 
 
-
-        // made a String placeholder
-        // loop through array
-        // if array[i] equals array[i-1]
-        // append array[i] to duplicates placeholder String
-        // otherwise if not equal add to duplicates String but with a space between
-        // so all duplicates will be listed 'aaa' or 'bb' with no spaces
-        // take duplicates String and .split on those spaces to create an array
+//         made a String placeholder
+//         loop through array
+//         if array[i] equals array[i-1]
+//         append array[i] to duplicates placeholder String
+//         otherwise if not equal add to duplicates String but with a space between
+//         so all duplicates will be listed 'aaa' or 'bb' with no spaces
+//         take duplicates String and .split on those spaces to create an array
     }
 
 
