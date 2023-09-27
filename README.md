@@ -17,44 +17,7 @@
 * **Purpose**
     * To establish greater familiarity with loops and arrays.
     * To demonstrate the implementation of a [Utility class](https://www.quora.com/What-is-a-utility-class)
-    
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br>
 ## `String getFirstElement(String[] array)`
 * **Description**
     * Given an array of `String` objects, return the first element of the array.
