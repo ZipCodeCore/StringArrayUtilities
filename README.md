@@ -17,7 +17,8 @@
 * **Purpose**
     * To establish greater familiarity with loops and arrays.
     * To demonstrate the implementation of a [Utility class](https://www.quora.com/What-is-a-utility-class)
-
+    * And because arrays of Strings are everywhwere in Java. _Freakin' Everywhere_
+    
 ## String Arrays
 
 Java uses String arrays to store a collection of String values. String arrays are declared and initialized in a similar way to other arrays in Java. Once declared, individual elements of the array can be accessed and manipulated using their index. String arrays are commonly used in Java programs to store and manipulate text data.
