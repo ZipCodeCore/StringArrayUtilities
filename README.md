@@ -35,9 +35,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -58,17 +55,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     brown
     ```
-
-
-
 
 
 ### Example 3
@@ -84,35 +75,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     fox
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br><br><br><br>
@@ -133,9 +100,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -155,9 +119,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -177,47 +138,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     fox
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <br><br><br><br>
 ## `String getLastElement(String[] array)`
@@ -237,9 +162,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -260,17 +182,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     lazy
     ```
-
-
-
 
 
 ### Example 3
@@ -286,9 +202,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -297,36 +210,6 @@
     
     
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <br><br><br><br>
 ## `String getSecondToLastElement(String[] array)`
@@ -346,9 +229,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -369,17 +249,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     over
     ```
-
-
-
 
 
 ### Example 3
@@ -395,9 +269,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -408,30 +279,6 @@
     
     
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br><br><br><br>
@@ -452,9 +299,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -477,56 +321,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     false
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br><br><br><br>
@@ -547,9 +346,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -572,17 +368,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     [jugs, liquor, dozen, five, with, box, my, Pack]
     ```
-
-
-
 
     
 
@@ -599,44 +389,11 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
 
     ```
     [dwarf, lazy, the, over, jumps, goblin, onyx, quick, The]
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br>
 ## `boolean isPalindromic(String[] array)`
 * **Description**
@@ -656,9 +413,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
     ```
     true
@@ -679,9 +433,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
     ```
     true
@@ -704,46 +455,10 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
     ```
     false
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <br><br><br><br>
 ## `boolean isPangramic(String[] array)`
@@ -764,9 +479,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
     ```
     true
@@ -786,9 +498,6 @@
     // : Then
     System.out.println(outcome);
     ```
-
-
-
 * Sample Output
     ```
     true
@@ -796,37 +505,7 @@
    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br>
 ## `int getNumberOfOccurrences(String[] array, String value)`
 * **Description**
@@ -845,9 +524,6 @@
     // : Then
     System.out.println(numberOfOccurrences);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -870,9 +546,6 @@
     // : Then
     System.out.println(numberOfOccurrences);
     ```
-
-
-
 * Sample Output
 
     ```
@@ -893,47 +566,11 @@
     // : Then
     System.out.println(numberOfOccurrences);
     ```
-
-
-
 * Sample Output
 
     ```
     1
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br>
 ## `String[] removeConsecutiveDuplicates(String[] array)`
 * **Description**
@@ -954,16 +591,10 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aba, baa, bab, bba, bbb];
     ```
-
-
-
 
 ### Example 2
 * Sample Script
@@ -978,16 +609,10 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aba, baa, bab, bba, zzz, bba, bbb];
     ```
-
-
-
 
 ### Example 3
 * Sample Script
@@ -1002,49 +627,10 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aba, baa, bab, bba, zzz, bba, aba, bbb];
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <br><br><br><br>
 ## `String[] packConsecutiveDuplicates(String[] array)`
@@ -1065,9 +651,6 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aaa, b, cc, aa, d, eee];
@@ -1087,9 +670,6 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [tt, q, aaa, b, cc, aa, d, eee];
@@ -1109,40 +689,10 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [m, oo, n, m, a, n];
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br>
 ## `String[] removeValues(String[] array, String valueToRemove)`
 * **Description**
@@ -1182,9 +732,6 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aba, aba, baa, bab, bbb, bbb];
@@ -1205,27 +752,9 @@
     // : Then
     System.out.println(Arrays.toString(actual));
     ```
-
-
-
 * Sample Output
     ```
     [aba, aba, baa, bab, bba, bba, bba, bba];
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
