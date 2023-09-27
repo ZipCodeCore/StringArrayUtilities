@@ -18,6 +18,41 @@
     * To establish greater familiarity with loops and arrays.
     * To demonstrate the implementation of a [Utility class](https://www.quora.com/What-is-a-utility-class)
 
+## String Arrays
+
+Java uses String arrays to store a collection of String values. String arrays are declared and initialized in a similar way to other arrays in Java. Once declared, individual elements of the array can be accessed and manipulated using their index. String arrays are commonly used in Java programs to store and manipulate text data.
+
+You can declare and initialize a String array in Java using the following syntax:
+
+```java
+String[] myArray = {"value1", "value2", "value3"};
+```
+
+This creates a String array named myArray with three elements, each initialized with a String value. You can also declare an empty String array and initialize it later:
+
+```java
+String[] myArray = new String[3];
+myArray[0] = "value1";
+myArray[1] = "value2";
+myArray[2] = "value3";
+```
+
+This creates an empty String array with three elements, and then initializes each element with a String value.
+
+## What did he say about splitting strings into string arrays?
+
+You can split a sentence into a String array in Java using the `split()` method of the String class. The `split()` method takes a delimiter as an argument and returns an array of substrings split at each occurrence of the delimiter. Here's an example:
+
+```java
+String sentence = "The quick brown fox jumps over the lazy dog";
+String[] words = sentence.split(" ");
+```
+
+This splits the sentence string at each space character and stores the resulting substrings in a String array named words. The resulting array will contain the individual words of the sentence as separate elements.
+
+Hmm. That __seems important__. Maybe I should read it again.
+Maybe it's _really important_.
+
 ## `String getFirstElement(String[] array)`
 * **Description**
     * Given an array of `String` objects, return the first element of the array.
