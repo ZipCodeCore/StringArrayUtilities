@@ -66,9 +66,9 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        return false;
-    }
-
+        String alpha = "abcdefghijklmnopqrstuvxyz";
+    return false;
+}
     /**
      * @param array array of String objects
      * @param value value to check array for
@@ -92,6 +92,7 @@ public class StringArrayUtils {
      * @return array of Strings with consecutive duplicates removes
      */ // TODO
     public static String[] removeConsecutiveDuplicates(String[] array) {
+        //create_new_array, step through array
         return null;
     }
 
